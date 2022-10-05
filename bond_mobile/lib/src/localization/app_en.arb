@@ -2,5 +2,20 @@
   "appTitle": "bond_mobile",
   "@appTitle": {
     "description": "The title of the application"
-  }
+  },
+  "bond":"Bond",
+  "contact":"Contacts",
+  "songs":"Songs",
+  "messages":"Messages",
+  "accountAndSettings":"Account & Settings",
+  "myProfile":"My Profile",
+  "manageProfileInfo":"Manage your profile details",
+  "settings":"Settings",
+  "manageAppSettings":"Manage and personalize the app settings",
+  "coupleSpace":"Couple Space",
+  "manageCoupleInfo":"Manage your couple's information",
+  "referFriend":"Refer a friend",
+  "tellPeopleAboutApp":"Tell people about Bond app",
+  "helpCenter":"Help Center",
+  "getHelp":"Get help"
 }
