@@ -10,9 +10,9 @@ import 'settings/settings_view.dart';
 /// The Widget that configures your application.
 class Bond extends StatelessWidget {
   const Bond({
-    super.key,
+    Key?key,
     required this.settingsController,
-  });
+  }):super(key:key);
 
   final SettingsController settingsController;
 
