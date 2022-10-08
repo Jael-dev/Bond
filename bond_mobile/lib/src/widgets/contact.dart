@@ -1,4 +1,3 @@
-import 'dart:html';
 
 import 'package:bond_mobile/src/widgets/heart.dart';
 import 'package:flutter/material.dart';
