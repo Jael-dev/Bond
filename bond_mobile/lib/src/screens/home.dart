@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:bond_mobile/src/router/router.gr.dart';
-import 'package:bond_mobile/src/screens/home/home_page.dart';
+import 'package:bond_mobile/src/screens/screens.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -10,12 +10,11 @@ final _key = GlobalKey<ScaffoldState>();
 
 class Home extends ConsumerWidget {
   const Home({Key? key}) : super(key: key);
-
   @override
-   Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return AutoTabsScaffold(
       scaffoldKey: _key,
-      routes: const [ Contacts(), Messages(), Songs()],
+      routes: [],
       builder: (context, child, animation) => ScaleTransition(
         scale: animation,
         child: child,
@@ -49,12 +48,15 @@ class NavbarBuilder extends StatelessWidget {
           icon: Icon(Icons.person_outline),
           label: 'Account',
         ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.person_outline),
+          label: 'Account',
+        ),
       ],
       currentIndex: router.activeIndex,
       selectedItemColor: Palette.black,
       backgroundColor: Colors.white,
       onTap: (index) => router.setActiveIndex(index),
-    
     );
   }
 }

@@ -15,7 +15,7 @@ class Heart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
-      duration: Duration(microseconds: 500),
+      duration: const Duration(microseconds: 500),
       curve: Curves.easeInOutCirc,
       height: 20,
       width: 20,

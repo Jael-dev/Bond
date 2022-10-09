@@ -27,10 +27,10 @@ class AppRouter extends _i2.RootStackRouter {
         child: const _i1.Home(),
       );
     },
-    HomeRoute.name: (routeData) {
+    HomeSub.name: (routeData) {
       return _i2.AdaptivePage<dynamic>(
         routeData: routeData,
-        child: const _i1.HomePage(),
+        child: const _i1.HomeSub(),
       );
     },
     Messages.name: (routeData) {
@@ -60,8 +60,8 @@ class AppRouter extends _i2.RootStackRouter {
           path: '/',
           children: [
             _i2.RouteConfig(
-              HomeRoute.name,
-              path: 'home_page',
+              HomeSub.name,
+              path: 'home_sub',
               parent: Home.name,
             ),
             _i2.RouteConfig(
@@ -71,7 +71,7 @@ class AppRouter extends _i2.RootStackRouter {
             ),
             _i2.RouteConfig(
               Songs.name,
-              path: 'song',
+              path: 'songs',
               parent: Home.name,
             ),
             _i2.RouteConfig(
@@ -98,15 +98,15 @@ class Home extends _i2.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i1.HomePage]
-class HomeRoute extends _i2.PageRouteInfo<void> {
-  const HomeRoute()
+/// [_i1.HomeSub]
+class HomeSub extends _i2.PageRouteInfo<void> {
+  const HomeSub()
       : super(
-          HomeRoute.name,
-          path: 'home_page',
+          HomeSub.name,
+          path: 'home_sub',
         );
 
-  static const String name = 'HomeRoute';
+  static const String name = 'HomeSub';
 }
 
 /// generated route for
@@ -127,7 +127,7 @@ class Songs extends _i2.PageRouteInfo<void> {
   const Songs()
       : super(
           Songs.name,
-          path: 'song',
+          path: 'songs',
         );
 
   static const String name = 'Songs';
