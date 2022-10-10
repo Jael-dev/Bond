@@ -5,20 +5,10 @@ class Decorations {
   static BoxDecoration get transperentButton => BoxDecoration(
       borderRadius: BorderRadius.circular(25),
       border: Border.all(color: Palette.gray, width: 1));
-  static BoxDecoration get orderSummaryBox => BoxDecoration(
-      borderRadius: BorderRadius.circular(5),
-      border: Border.all(color: Palette.grey, width: 1));
-  static BoxDecoration get orderSummaryBoxHeader => BoxDecoration(
-        color: Palette.gray[40],
-      );
-  static BoxDecoration get countDownTimer => BoxDecoration(
-        color: Palette.danger,
-        borderRadius: BorderRadius.circular(15),
-      );
-  static BoxDecoration get discountChip => BoxDecoration(
-        color: Palette.dark,
-        borderRadius: BorderRadius.circular(4),
-      );
+
+  // static BoxDecoration get dividerDecoration => BoxDecoration(
+  //   border: 
+  // );
 
   static InputDecoration inputBoxDecoration(String hint, IconData? icon) =>
       InputDecoration(

@@ -50,7 +50,7 @@ class Bond extends StatelessWidget {
             textSelectionTheme: TextSelectionThemeData(
               cursorColor: Palette.dark,
             ),
-            textTheme: GoogleFonts.robotoTextTheme(textTheme).apply(
+            textTheme: GoogleFonts.arimoTextTheme(textTheme).apply(
               bodyColor: Colors.black,
               displayColor: Colors.black,
             ),
