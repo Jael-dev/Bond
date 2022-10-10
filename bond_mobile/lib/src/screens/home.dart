@@ -1,6 +1,5 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:bond_mobile/src/router/router.gr.dart';
-import 'package:bond_mobile/src/screens/screens.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -14,11 +13,7 @@ class Home extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return AutoTabsScaffold(
       scaffoldKey: _key,
-      routes: [],
-      builder: (context, child, animation) => ScaleTransition(
-        scale: animation,
-        child: child,
-      ),
+      routes: const [HomeSub(), Messages(), Songs(), Messages(), Contacts()],
       bottomNavigationBuilder: (context, router) {
         return NavbarBuilder(context: context, router: router);
       },
@@ -37,24 +32,28 @@ class NavbarBuilder extends StatelessWidget {
       type: BottomNavigationBarType.fixed,
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
-          icon: Icon(Icons.contact_page_outlined),
+          icon: Icon(Icons.home_outlined),
+          label: 'Home',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.import_contacts_outlined),
           label: 'Contacts',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.shopping_cart_outlined),
-          label: 'Cart',
+          icon: Icon(Icons.message_outlined),
+          label: 'Messages',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.person_outline),
-          label: 'Account',
+          icon: Icon(Icons.music_note_sharp),
+          label: 'Songs',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.person_outline),
-          label: 'Account',
+          icon: Icon(Icons.settings_outlined),
+          label: 'Settings',
         ),
       ],
       currentIndex: router.activeIndex,
-      selectedItemColor: Palette.black,
+      selectedItemColor: Palette.orange,
       backgroundColor: Colors.white,
       onTap: (index) => router.setActiveIndex(index),
     );
