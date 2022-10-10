@@ -1,3 +1,4 @@
+import 'package:bond_mobile/src/utils/utils.dart';
 import 'package:flutter/material.dart';
 
 class Heart extends StatelessWidget {
@@ -14,15 +15,28 @@ class Heart extends StatelessWidget {
   final String image;
   @override
   Widget build(BuildContext context) {
-    return AnimatedContainer(
-      duration: const Duration(microseconds: 500),
-      curve: Curves.easeInOutCirc,
-      height: 20,
-      width: 20,
+    return Container(
+      height: 70,
+      width: 70,
       decoration: BoxDecoration(
-              color: Colors.blue,
-              borderRadius: BorderRadius.circular(500)),
-      child: Image.asset(image),
+        color: Palette.orange,
+        borderRadius: BorderRadius.circular(500),
+        boxShadow: const [
+          BoxShadow(
+            color: Palette.orange,
+            blurRadius: 20.0, 
+            spreadRadius: 2.0, 
+            offset: Offset(
+              0.0, 
+              0.0, 
+            ),
+          )
+        ],
+      ),
+      child: CircleAvatar(
+        backgroundColor: Palette.white,
+        child: Image.asset(image),
+      ),
     );
   }
 }

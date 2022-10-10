@@ -1,5 +1,6 @@
 import 'package:bond_mobile/src/extensions/extensions.dart';
 import 'package:bond_mobile/src/utils/utils.dart';
+import 'package:bond_mobile/src/widgets/heart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -14,9 +15,10 @@ class _HomeSubState extends ConsumerState<HomeSub> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      // mainAxisAlignment: MainAxisAlignment.center,
       children: [
         const SizedBox(height: 100),
+
+        // Bond title and Divider
         Center(
             child: Column(
           children: [
@@ -35,6 +37,8 @@ class _HomeSubState extends ConsumerState<HomeSub> {
               ),
             ),
             const SizedBox(height: 20),
+
+            // Couple's avatars
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 12.0),
               child: SizedBox(
@@ -62,15 +66,27 @@ class _HomeSubState extends ConsumerState<HomeSub> {
                 ),
               ),
             ),
+
+            // Couple name
             Container(
               height: 40,
               width: context.screenWidth / 1.8,
               decoration: Decorations.transperentButton.copyWith(
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(color: Palette.orange, width: 1),
-                  color: Palette.orange
-                  ),
-              child: Center(child: Text("Les Tourtereaux", style: Styles.heading1.copyWith(color: Palette.white,fontSize: 20))),
+                  color: Palette.orange),
+              child: Center(
+                  child: Text("Les Tourtereaux",
+                      style: Styles.heading1
+                          .copyWith(color: Palette.white, fontSize: 20))),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 150.0),
+              child: Heart(
+                  onClick: () {},
+                  onDoubleClick: () {},
+                  onLongClick: () {},
+                  image: 'assets/images/logo.png'),
             )
           ],
         ))
