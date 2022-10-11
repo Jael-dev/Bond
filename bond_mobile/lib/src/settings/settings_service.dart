@@ -1,11 +1,14 @@
 import 'dart:io';
-
+import 'package:flutter_contacts/flutter_contacts.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SettingsService {
   final Future<SharedPreferences> _prefsFuture =
       SharedPreferences.getInstance();
+
+// Contact list 
+
 
   Future<ThemeMode> themeMode() async {
     SharedPreferences preferences = await _prefsFuture;

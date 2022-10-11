@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "bond_mobile",
+            "cwd": "bond_mobile",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "bond_mobile (profile mode)",
+            "cwd": "bond_mobile",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "bond_mobile (release mode)",
+            "cwd": "bond_mobile",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}

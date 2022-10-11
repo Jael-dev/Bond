@@ -1,6 +1,8 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:bond_mobile/src/providers/providers.dart';
 import 'package:bond_mobile/src/router/router.gr.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_contacts/flutter_contacts.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../utils/palette.dart';
@@ -11,9 +13,13 @@ class Home extends ConsumerWidget {
   const Home({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    // ref.read(contactList.notifier).state = getContacts();
+    getContacts().then((value){
+      ref.read(contactList.notifier).state = value;
+    });
     return AutoTabsScaffold(
       scaffoldKey: _key,
-      routes: const [HomeSub(), Messages(), Songs(), Messages(), Contacts()],
+      routes: const [HomeSub(), Contacts(), Songs(), Messages(), Contacts()],
       bottomNavigationBuilder: (context, router) {
         return NavbarBuilder(context: context, router: router);
       },
@@ -59,3 +65,12 @@ class NavbarBuilder extends StatelessWidget {
     );
   }
 }
+
+ Future<List<Contact>>getContacts() async {
+      
+  await FlutterContacts.requestPermission() ;
+   return await FlutterContacts.getContacts(
+          withProperties: true, withPhoto: true); 
+
+   
+  }

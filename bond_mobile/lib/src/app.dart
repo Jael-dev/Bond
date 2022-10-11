@@ -5,9 +5,11 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'settings/settings_controller.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
 
 /// The Widget that configures your application.
-class Bond extends StatelessWidget {
+class Bond extends ConsumerWidget {
   Bond({
     Key? key,
     required this.settingsController,
@@ -15,11 +17,9 @@ class Bond extends StatelessWidget {
 
   final SettingsController settingsController;
   final AppRouter _appRouter = AppRouter();
-
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final textTheme = Theme.of(context).textTheme;
-
     return AnimatedBuilder(
       animation: settingsController,
       builder: (BuildContext context, Widget? child) {
@@ -61,4 +61,9 @@ class Bond extends StatelessWidget {
       },
     );
   }
-}
+} 
+
+
+
+
+

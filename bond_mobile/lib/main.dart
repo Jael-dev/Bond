@@ -7,7 +7,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
   final settingsController = SettingsController(SettingsService());
   await settingsController.loadSettings();
   await SystemChrome.setPreferredOrientations([

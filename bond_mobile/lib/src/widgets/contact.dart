@@ -1,13 +1,10 @@
-
-import 'package:bond_mobile/src/widgets/heart.dart';
 import 'package:flutter/material.dart';
 
-class Contact extends StatelessWidget {
-  const Contact({Key?key, required this.profile, required this.name, required this.message, required this.heart}):super(key:key);
+class ContactView extends StatelessWidget {
+  const ContactView({Key?key, required this.profile, required this.name, required this.message}):super(key:key);
   final String profile;
   final String name;
   final String message;
-  final Heart heart;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +22,6 @@ class Contact extends StatelessWidget {
               Text(message)
             ],
           ),
-          heart
         ],
       ),
     );
