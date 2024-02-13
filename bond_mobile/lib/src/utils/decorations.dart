@@ -6,10 +6,6 @@ class Decorations {
       borderRadius: BorderRadius.circular(25),
       border: Border.all(color: Palette.gray, width: 1));
 
-  // static BoxDecoration get dividerDecoration => BoxDecoration(
-  //   border: 
-  // );
-
   static InputDecoration inputBoxDecoration(String hint, IconData? icon) =>
       InputDecoration(
         hintText: hint,

@@ -1,5 +1,4 @@
-import 'dart:io';
-import 'package:flutter_contacts/flutter_contacts.dart';
+import 'dart:io' show Platform;
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

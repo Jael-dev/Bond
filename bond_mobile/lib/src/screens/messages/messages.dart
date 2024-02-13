@@ -13,7 +13,7 @@ class _MessagesState extends ConsumerState<Messages> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text("Messages Page"),
+      child: const Text("Messages Page"),
     );
   }
 }
